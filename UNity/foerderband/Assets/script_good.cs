@@ -5,7 +5,7 @@ public class script_good : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other){
 		if (gameObject.name == "badCollider") {
-			if (!other.tag.Equals ("Good"))
+			if (other.tag.Equals ("Bad"))
 				GameObject.Find ("Main Camera").GetComponent<GUI> ().score++;
 			else
 				GameObject.Find ("Main Camera").GetComponent<GUI> ().leben--;

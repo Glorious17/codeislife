@@ -1,0 +1,6 @@
+TODO
+
+- activate Treadmillmovement when Cup collide with Treadmill
+
+
+Schreibt euren Namen dahinter, wenn ihr es erledigt habt ^^										
