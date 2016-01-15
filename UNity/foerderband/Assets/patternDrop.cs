@@ -2,13 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class patterDrop : MonoBehaviour {
+public class patternDrop : MonoBehaviour {
 
 	public GameObject goodCup;
 	public GameObject badCup;
 	private GameObject go;
 	public int level = 4;
-	public int gridWidth = 0;
+    public int maxLevel = 18;
+	public int gridWidth = 1;
 	private bool broken = false;
 	private int counter = 0;
 
@@ -30,7 +31,7 @@ public class patterDrop : MonoBehaviour {
 
 		if(Input.GetKeyUp("space")){
 			deletePattern();
-			if(level < 16){
+			if(level < maxLevel){
 				level++;
 			}
 			else{
