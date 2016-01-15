@@ -5,11 +5,12 @@ public class MoveNapf : MonoBehaviour {
 
 	private Rigidbody rb;
 	private float z = 15f;
-	public int speed = 5; 
+	public int speed = 50; 
 
 	void Start()
-	{
+	{   
 		rb = GetComponent<Rigidbody> ();
+        rb.freezeRotation = true;
 	}
 
 
