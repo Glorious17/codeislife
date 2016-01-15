@@ -4,9 +4,6 @@ using System.Collections;
 
 public class ball : MonoBehaviour {
 	public float movespeed = 10f;
-	public bool quality_good = true;
-
-	private Rigidbody rbody;
 
 	// Use this for initialization
 	void Start () {
