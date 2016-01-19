@@ -2,5 +2,13 @@ TODO
 
 - activate Treadmillmovement when Cup collide with Treadmill
 
+-Extraleben, auch über Maximum hinaus.
+
+-Band verlangsamen
+
+-Unverwundbarkeit (auch intakte Näpfe dürfen für eine gewisse Zeit fallen)
+
+
+
 
 Schreibt euren Namen dahinter, wenn ihr es erledigt habt ^^										
