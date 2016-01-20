@@ -1,6 +1,7 @@
 TODO
 
-- activate Treadmillmovement when Cup collide with Treadmill
+- activate Treadmillmovement when Cup collides with Treadmill
+es klappt esklappt! 20.1.16- Katrin
 
 -Extraleben, auch über Maximum hinaus.
 
