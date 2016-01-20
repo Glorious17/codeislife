@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MoveNapf : MonoBehaviour {
+public class TouchScript : MonoBehaviour {
 
 	private Rigidbody rb;
 	private float z = 15f;

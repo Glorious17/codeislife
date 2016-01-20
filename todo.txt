@@ -3,11 +3,11 @@ TODO
 - activate Treadmillmovement when Cup collides with Treadmill
 es klappt esklappt! 20.1.16- Katrin
 
--Extraleben, auch über Maximum hinaus.
+-Extraleben, auch über Maximum hinaus. (funktioniert, Katrin, Cornelia, Leo)
 
--Band verlangsamen
+-Band verlangsamen (funktioniert noch nicht, Katrin, Cornelia, Leo)
 
--Unverwundbarkeit (auch intakte Näpfe dürfen für eine gewisse Zeit fallen)
+-Unverwundbarkeit (auch intakte Näpfe dürfen für eine gewisse Zeit fallen, funktioniert nicht und finden wir überflüssig/diskussionsbedarf vorhanden, Katrin, Cornelia, Leo)
 
 
 

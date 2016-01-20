@@ -6,11 +6,12 @@ public class patternDrop : MonoBehaviour {
 
 	public GameObject goodCup;
 	public GameObject badCup;
+	public GameObject [] powerUp;
 	private GameObject go;
 	public int level = 4;
     public int maxLevel = 18;
 	public int gridWidth = 1;
-	private bool broken = false;
+	private bool alreadyExists = false;
 	private int counter = 0;
 
 	public int gridMin = 0;
@@ -54,6 +55,13 @@ public class patternDrop : MonoBehaviour {
 
 			if(isFreeSpace()){
 
+				if(!alreadyExists && GameObject.Find ("Main Camera").GetComponent<GUI> ().timeAnz > 0 && GameObject.Find ("Main Camera").GetComponent<GUI> ().timeAnz%3==0){
+					go = Instantiate(powerUp[(int)Random.Range(0f,2f)], new Vector3(xPos, yPos, zPos), Quaternion.identity) as GameObject;
+					pattern.Add (go);
+					alreadyExists = true;
+					counter++;
+				}
+
 				if(counter < Mathf.Round ((float)level/faktor)){
 					go = Instantiate(badCup, new Vector3(xPos, yPos, zPos), Quaternion.identity) as GameObject;
 				}else{
@@ -73,6 +81,7 @@ public class patternDrop : MonoBehaviour {
 		foreach (GameObject p in pattern) {
 			Destroy(p);
 		}
+		alreadyExists = false;
 		pattern.Clear ();
 	}
 
