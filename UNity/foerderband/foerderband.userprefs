@@ -1,11 +1,8 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Treadmill.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\TouchScript.cs">
     <Files>
-      <File FileName="Assets\script_good.cs" Line="19" Column="29" />
-      <File FileName="Assets\Treadmill.cs" Line="6" Column="31" />
-      <File FileName="Assets\patternDrop.cs" Line="59" Column="36" />
-      <File FileName="Assets\TouchScript.cs" Line="4" Column="25" />
+      <File FileName="Assets\TouchScript.cs" Line="7" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

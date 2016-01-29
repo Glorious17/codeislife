@@ -4,7 +4,7 @@ using System.Collections;
 public class TouchScript : MonoBehaviour {
 
 	private Rigidbody rb;
-	private float z = 15f;
+	private float z = 10f;
 	public int speed = 50; 
 
 	void Start()
@@ -17,12 +17,11 @@ public class TouchScript : MonoBehaviour {
 	void OnMouseDrag()
 	{
 		Vector3 v3 = Input.mousePosition;
-		//v3.y = 0;
 		v3.z = z;
+		//Debug.Log (v3.z);
 		v3 = Camera.main.ScreenToWorldPoint(v3);
 
 		rb.velocity = (v3 - gameObject.transform.position) * speed;
 	}
-
-
+		
 }
