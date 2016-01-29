@@ -21,13 +21,14 @@ public class patternDrop : MonoBehaviour {
 	float yPos = 5F;
 	float zPos = 0F;
 	float faktor = 4F;
-	List<GameObject> pattern = new List<GameObject>();
+	public List<GameObject> pattern = new List<GameObject>();
 	// Use this for initialization
 	void Start () {
 		spawnPattern ();
 	}
 	
 	// Update is called once per frame
+    /*
 	void Update () {
 
 		if(Input.GetKeyUp("space")){
@@ -46,8 +47,9 @@ public class patternDrop : MonoBehaviour {
 			Debug.Log(Mathf.Round(Random.Range(1,5)) * gridWidth);
 		}
 	}
+    */
 
-	void spawnPattern(){
+	public void spawnPattern(){
 
 		while(counter < level) {
 			xPos = Random.Range(gridMin,gridMax) * gridWidth;
@@ -64,6 +66,7 @@ public class patternDrop : MonoBehaviour {
 
 				if(counter < Mathf.Round ((float)level/faktor)){
 					go = Instantiate(badCup, new Vector3(xPos, yPos, zPos), Quaternion.identity) as GameObject;
+
 				}else{
 					go = Instantiate(goodCup, new Vector3(xPos, yPos, zPos), Quaternion.identity) as GameObject;
 				}
@@ -72,9 +75,10 @@ public class patternDrop : MonoBehaviour {
 				counter++;
 			}
 		}
+        counter = 0;
 	}
 
-	void deletePattern(){
+	public void deletePattern(){
 
 		counter = 0;
 

@@ -33,6 +33,5 @@ public class scoreObserverBad : MonoBehaviour {
         }
         else
             GameObject.Find("Main Camera").GetComponent<GUI>().leben--;
-        Destroy(other.gameObject);
     }
 }

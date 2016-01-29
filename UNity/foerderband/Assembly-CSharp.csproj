@@ -45,21 +45,25 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CupCounter.cs" />
      <Compile Include="Assets\GUI.cs" />
      <Compile Include="Assets\OnCollisionAddMovement.cs" />
      <Compile Include="Assets\TouchScript.cs" />
      <Compile Include="Assets\Treadmill.cs" />
      <Compile Include="Assets\patternDrop.cs" />
-<<<<<<< HEAD
      <Compile Include="Assets\scoreObserverBad.cs" />
      <Compile Include="Assets\scoreObserverGood.cs" />
-=======
->>>>>>> 74078ba348ef6ab46f402c63a4c7e733bb5e9279
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil">
  <HintPath>D:/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>

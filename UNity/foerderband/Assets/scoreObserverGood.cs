@@ -8,6 +8,5 @@ public class scoreObserverGood : MonoBehaviour {
 			GameObject.Find ("Main Camera").GetComponent<GUI> ().score++;
 		else
 			GameObject.Find ("Main Camera").GetComponent<GUI> ().leben--;
-        Destroy(other.gameObject);
     }
 }
