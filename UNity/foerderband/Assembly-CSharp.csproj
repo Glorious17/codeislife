@@ -50,7 +50,6 @@
      <Compile Include="Assets\TouchScript.cs" />
      <Compile Include="Assets\Treadmill.cs" />
      <Compile Include="Assets\patternDrop.cs" />
-     <Compile Include="Assets\script_good.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
