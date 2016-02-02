@@ -8,7 +8,7 @@ public class patternDrop : MonoBehaviour {
 	public GameObject [] powerUp; //PowerUp Array
     public List<GameObject> pattern = new List<GameObject>(); //Liste in der die GGameObjecte des Musters abgespeichert werden, um sie wieder zu löschen
 
-    public int level = 4;
+    public int level = 3;
     public int maxLevel = 18;
 	private int gridWidth = 2;
     private int gridMin = 0;
@@ -51,7 +51,7 @@ public class patternDrop : MonoBehaviour {
     */
 
 	public void spawnPattern(){
-
+        ++level;
 		while(counter < level) {
 			xPos = Random.Range(gridMin,gridMax) * gridWidth;
 			zPos = Random.Range(gridMin,gridMax) * gridWidth;
