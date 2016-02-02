@@ -20,8 +20,8 @@ public class scoreObserverBad : MonoBehaviour {
                     break;
                 case "SlowDown(Clone)":
                     Debug.Log("SLOOOOOOOWpoke");
-                    GameObject.Find("Plane").GetComponent<Treadmill>().slowDownStart = GameObject.Find("Main Camera").GetComponent<GUI>().timeAnz;
-                    GameObject.Find("Plane").GetComponent<Treadmill>().slowDownActive = true;
+                    GameObject.Find("Treadmill").GetComponent<TreadmillRegulator>().slowDownStart = GameObject.Find("Main Camera").GetComponent<GUI>().timeAnz;
+                    GameObject.Find("Treadmill").GetComponent<TreadmillRegulator>().slowDownActive = true;
                     break;
                 case "Immortality(Clone)":
                     Debug.Log("gamedesigner können nichts");

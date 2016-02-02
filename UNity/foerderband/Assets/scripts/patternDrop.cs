@@ -4,24 +4,25 @@ using System.Collections.Generic;
 
 public class patternDrop : MonoBehaviour {
 
-	public GameObject goodCup;
-	public GameObject badCup;
-	public GameObject [] powerUp;
-	private GameObject go;
-	public int level = 4;
-    public int maxLevel = 18;
-	public int gridWidth = 1;
-	private bool alreadyExists = false;
-	private int counter = 0;
+	public GameObject goodCup, badCup;
+	public GameObject [] powerUp; //PowerUp Array
+    public List<GameObject> pattern = new List<GameObject>(); //Liste in der die GGameObjecte des Musters abgespeichert werden, um sie wieder zu löschen
 
-	public int gridMin = 0;
-	public int gridMax = 5;
+    public int level = 4;
+    public int maxLevel = 18;
+	private int gridWidth = 2;
+    private int gridMin = 0;
+    private int gridMax = 5;
+
+    private GameObject go;
+    private bool alreadyExists = false;
+	private int counter = 0;
 
 	float xPos = 0F;
 	float yPos = 5F;
 	float zPos = 0F;
-	float faktor = 4F;
-	public List<GameObject> pattern = new List<GameObject>();
+	float faktor = 4F; //Faktor, um die Anzahl der schelchten Näpfe zu bestimmen
+	
 	// Use this for initialization
 	void Start () {
 		spawnPattern ();
@@ -58,8 +59,9 @@ public class patternDrop : MonoBehaviour {
 			if(isFreeSpace()){
 
 				if(!alreadyExists && GameObject.Find ("Main Camera").GetComponent<GUI> ().timeAnz > 0 && GameObject.Find ("Main Camera").GetComponent<GUI> ().timeAnz%3==0){
-					go = Instantiate(powerUp[(int)Random.Range(0f,2f)], new Vector3(xPos, yPos, zPos), Quaternion.identity) as GameObject;
-					pattern.Add (go);
+                    //PowerUp-Spawn, immer zu Zeitpunkten, die durch einen gewissen Faktor geteilt, den Rest 0 besitzen
+                    go = Instantiate(powerUp[(int)Random.Range(0f,2f)], new Vector3(xPos, yPos, zPos), Quaternion.identity) as GameObject;
+					pattern.Add (go); //instantiiertes GameObject wird  der Liste hinzugefügt
 					alreadyExists = true;
 					counter++;
 				}
@@ -86,7 +88,7 @@ public class patternDrop : MonoBehaviour {
 			Destroy(p);
 		}
 		alreadyExists = false;
-		pattern.Clear ();
+		pattern.Clear (); //Liste wird zurückgesetzt
 	}
 
 	bool isFreeSpace(){

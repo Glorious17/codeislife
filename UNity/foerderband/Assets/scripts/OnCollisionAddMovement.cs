@@ -19,4 +19,10 @@ public class OnCollisionAddMovement : MonoBehaviour {
         GameObject go = col.gameObject;
         go.AddComponent<Treadmill>();
     }
+
+    void OnCollisionExit(Collision col)
+    {
+        GameObject go = col.gameObject;
+        Destroy(go.GetComponent<Treadmill>());
+    }
 }
