@@ -42,6 +42,11 @@ public class GUI : MonoBehaviour {
 				isPaused = false;
 			}
 		}
+
+        if(leben <= 0)
+        {
+            Application.LoadLevel(2);
+        }
 		GUILayout.Label ("Zeit: " + timeAnz);
 		GUILayout.EndArea ();
 		
