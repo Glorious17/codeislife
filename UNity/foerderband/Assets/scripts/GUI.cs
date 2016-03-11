@@ -50,7 +50,7 @@ public class GUI : MonoBehaviour {
         GUILayout.Label("Zeit: " + timeAnz);
         GUILayout.EndArea();
 
-        GUILayout.BeginArea(new Rect(5, 5, 100, 80));
+        GUILayout.BeginArea(new Rect(5, 38, 100, 80));
         GUILayout.Label("Score: " + score);
         GUILayout.EndArea();
 
