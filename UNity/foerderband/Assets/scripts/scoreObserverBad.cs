@@ -2,7 +2,9 @@
 using System.Collections;
 
 public class scoreObserverBad : MonoBehaviour {
-	
+
+	public Camera mainCam;
+
 	void OnTriggerEnter(Collider other)
 	{
 		if (other.tag.Equals("Bad"))
@@ -20,7 +22,8 @@ public class scoreObserverBad : MonoBehaviour {
 				GameObject.Find("Treadmill").GetComponent<TreadmillRegulator>().slowDownStart = GameObject.Find("Main Camera").GetComponent<GUI>().timeAnz;
 				GameObject.Find("Treadmill").GetComponent<TreadmillRegulator>().slowDownActive = true;
 				break;
-			case "Immortality(Clone)":
+			case "Invert(Clone)":
+				mainCam.GetComponent<InvertScreen> ().i = 0;
 				break;
 			default:
 				break;
