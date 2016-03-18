@@ -50,6 +50,7 @@ public class patternDrop : MonoBehaviour {
 
 	//Called in Update() or CupCounter.cs
 	public void spawnPattern(){
+		GUI.wave++;
 		time = 0.0f;
 		level++; //Difficulty increases with each spawn (max 18)
 

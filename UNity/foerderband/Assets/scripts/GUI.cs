@@ -8,6 +8,7 @@ public class GUI : MonoBehaviour {
     public static int score;
     public float time = 0;
     public static int timeAnz = 0;
+	public static int wave;
 
     public Texture2D lives;
 
@@ -47,7 +48,7 @@ public class GUI : MonoBehaviour {
         {
             Application.LoadLevel(2);
         }
-        GUILayout.Label("Zeit: " + timeAnz);
+        GUILayout.Label("Welle: " + wave);
         GUILayout.EndArea();
 
         GUILayout.BeginArea(new Rect(5, 38, 100, 80));

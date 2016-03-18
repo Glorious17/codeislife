@@ -13,11 +13,12 @@ public class End_GUI : MonoBehaviour {
 
 
 	void OnGUI() {
-		score = GUI.score;
-		score += GUI.timeAnz;
+		score = GUI.score * GUI.wave;
         int buttonWidth = 200, buttonHeight = 100;
 		GUILayout.BeginArea (new Rect (Screen.width-Screen.width/2 - buttonWidth/2, Screen.height - Screen.height / 2 - buttonHeight / 2, buttonWidth, buttonHeight));
-        GUILayout.Label("Score: " + score);
+		GUILayout.Label ("Erreichte Welle: " + GUI.wave);
+		GUILayout.Label ("Erreichter Punktestand: " + GUI.score);
+		GUILayout.Label("Final Score: " + score);
 
         if (GUILayout.Button("Back to the Menu"))
 		{
