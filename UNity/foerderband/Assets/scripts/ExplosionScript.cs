@@ -2,19 +2,12 @@
 using System.Collections;
 
 public class ExplosionScript : MonoBehaviour {
-	
-	// Use this for initialization
-	void Start () {
+
+	/*
+ 	* Script for handeling the Bomb-Explosion
+	 * */
 		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-	
 	void OnMouseDrag(){
-		Debug.Log ("HURRA");
 		explosion ();
 	}
 	
@@ -30,6 +23,7 @@ public class ExplosionScript : MonoBehaviour {
 	}
 	
 	void explosion(){
+		//Object turns invisible and expands rapidly
 		GetComponent<Renderer>().enabled = false;
 		GameObject explosion = GameObject.Find("Bomb(Clone)");
 		explosion.transform.localScale += new Vector3 (2f, 0f, 2f);

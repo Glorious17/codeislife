@@ -3,6 +3,11 @@ using System.Collections;
 
 public class scoreObserverBad : MonoBehaviour {
 
+	/*
+	 * Script for BadColliders
+	 * 
+	 **/
+
 	public Camera mainCam;
 
 	void OnTriggerEnter(Collider other)

@@ -92,7 +92,7 @@ PlayerSettings:
   metroEnableLowLatencyPresentationAPI: 0
   xboxOneDisableKinectGpuReservation: 0
   virtualRealitySupported: 0
-  productGUID: 6ceb06cdfedb15c40a6443433e8e99a4
+  productGUID: 8e2162ffaf22f5b4ebe7f35fa2c0827d
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
@@ -254,11 +254,8 @@ PlayerSettings:
   ps4pnGameCustomData: 1
   playerPrefsSupport: 0
   ps4ReprojectionSupport: 0
-<<<<<<< HEAD
   ps4UseAudio3dBackend: 0
   ps4Audio3dVirtualSpeakerCount: 14
-=======
->>>>>>> 5c5d78e1641001fb67e3bc4de56232387af2274e
   ps4attribUserManagement: 0
   ps4attribMoveSupport: 0
   ps4attrib3DSupport: 0
@@ -372,9 +369,9 @@ PlayerSettings:
   metroWideTileShowName: 0
   metroDefaultTileSize: 1
   metroTileForegroundText: 1
-  metroTileBackgroundColor: {r: .13333334, g: .172549024, b: .215686277, a: 0}
-  metroSplashScreenBackgroundColor: {r: .13333334, g: .172549024, b: .215686277, a: 1}
-  metroSplashScreenUseBackgroundColor: 1
+  metroTileBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
+  metroSplashScreenBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
+  metroSplashScreenUseBackgroundColor: 0
   platformCapabilities: {}
   metroFTAName: 
   metroFTAFileTypes: []

@@ -4,33 +4,38 @@ using System.Collections.Generic;
 
 public class patternDrop : MonoBehaviour {
 
-	//some random bullshit
+ 	//Script for repeadedly spawning Patterns over Time with increasing Difficulty
+
+
 	public GameObject goodCup, badCup;
 	public GameObject [] powerUp; //PowerUp Array
-	public List<GameObject> pattern = new List<GameObject>(); //Liste in der die GGameObjecte des Musters abgespeichert werden, um sie wieder zu löschen
+	public List<GameObject> pattern = new List<GameObject>(); //Gamobject of one Pattern will be saved in this list to delete them later on
 
-	public int level = 3;
+	//Difficulty
+	public int level = 3; 
 	public int maxLevel = 18;
+	private int counter = 0;
+
+	//Measures of the pattern-grid
 	private int gridWidth = 2;
 	private int gridMin = 0;
 	private int gridMax = 5;
 
-	private GameObject go;
-	public bool alreadyExists = false;
-	private int counter = 0;
+	private GameObject go; //Filler object 
+	public bool alreadyExists = false; 
+
 	public float time = 0.0f;
 
+	//Position of GameObject in the Pattern-Grid
 	float xPos = 0F;
 	float yPos = 5F;
 	float zPos = 0F;
-	float faktor = 4F; //Faktor, um die Anzahl der schlechten Näpfe zu bestimmen
+	float faktor = 4F; //Factor which decides the percentage of bad cups in one pattern
 
-	// Use this for initialization
 	void Start () {
+		//First Spawn
 		spawnPattern ();
 	}
-
-	// Update is called once per frame
 
 	void Update () {
 		time += Time.deltaTime;
@@ -43,15 +48,20 @@ public class patternDrop : MonoBehaviour {
 		}
 	}
 
-
+	//Called in Update() or CupCounter.cs
 	public void spawnPattern(){
 		time = 0.0f;
-		++level;
+		level++; //Difficulty increases with each spawn (max 18)
+
+		//spawn one Pattern
 		while(counter < level) {
+
+			//Random Position in Grid 
 			xPos = Random.Range(gridMin,gridMax) * gridWidth;
 			zPos = Random.Range(gridMin,gridMax) * gridWidth;
 
 
+			//Powerup spawn (randomized, only when time is an even number)
 			if(isFreeSpace()){
 
 				if(!alreadyExists && GUI.timeAnz > 0 && GUI.timeAnz%2==0){
@@ -63,6 +73,8 @@ public class patternDrop : MonoBehaviour {
 					counter++;
 				}
 			}
+
+			//GoodCup/BadCup spawn
 			if(isFreeSpace()){
 				if(counter < Mathf.Round ((float)level/faktor)){
 					go = Instantiate(badCup, new Vector3(xPos, yPos, zPos), Quaternion.identity) as GameObject;
@@ -78,6 +90,7 @@ public class patternDrop : MonoBehaviour {
 		counter = 0;
 	}
 
+	//checks if Position in Grid is already occupied
 	bool isFreeSpace(){
 
 		foreach (GameObject p in pattern) {
@@ -91,6 +104,7 @@ public class patternDrop : MonoBehaviour {
 		return true;
 	}
 
+	//Deletes all GameObjects in pattern
 	void deletePattern(){
 
 		foreach (var p in pattern) {
