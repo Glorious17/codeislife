@@ -45,6 +45,7 @@ public class patternDrop : MonoBehaviour {
 
 
 	public void spawnPattern(){
+		GUI.wave++;
 		time = 0.0f;
 		++level;
 		while(counter < level) {

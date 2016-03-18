@@ -23,7 +23,7 @@ public class TreadmillRegulator : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+
 		if (!slowDownActive && GUI.timeAnz % 10 == 0)
 		{
 			speed += deltaSpeed * Time.deltaTime;
