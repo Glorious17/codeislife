@@ -1,12 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class scoreObserverBad : MonoBehaviour {
+/*
+ * Process Objects that pass the BadCollider
+ */
 
-	/*
-	 * Script for BadColliders
-	 * 
-	 **/
+public class scoreObserverBad : MonoBehaviour {
 
 	public Camera mainCam;
 

@@ -12,7 +12,6 @@ public class TreadmillRegulator : MonoBehaviour {
 	private float slowSpeed = 1f;
 	public float slowDownDuration = 5;
 	
-	// Use this for initialization
 	void Start () {
 		if (slowDownActive) {
 			publicSpeed = speed;
@@ -21,9 +20,9 @@ public class TreadmillRegulator : MonoBehaviour {
 		}
 	}
 	
-	// Update is called once per frame
 	void Update () {
 
+        //Speed increases every 10 seconds if slowdown is not active
 		if (!slowDownActive && GUI.timeAnz % 10 == 0)
 		{
 			speed += deltaSpeed * Time.deltaTime;
@@ -34,6 +33,8 @@ public class TreadmillRegulator : MonoBehaviour {
 			publicSpeed = slowSpeed;
 			
 		}
+
+        //End of slowDown
 		if (slowDownActive && slowDownStart + slowDownDuration <= GUI.timeAnz) {
 			slowDownActive = false;
 			publicSpeed = speed;

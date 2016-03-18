@@ -63,18 +63,6 @@
     <Reference Include="UnityEngine.Analytics">
       <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Advertisements">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Advertisements.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Analytics">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
@@ -86,14 +74,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <Compile Include="Assets\GUI.cs" />
-    <Compile Include="Assets\OnCollisionAddMovement.cs" />
-    <Compile Include="Assets\TouchScript.cs" />
-    <Compile Include="Assets\Treadmill.cs" />
-    <Compile Include="Assets\patternDrop.cs" />
-    <Compile Include="Assets\script_good.cs" />
-=======
     <Compile Include="Assets\scripts\CupCounter.cs" />
     <Compile Include="Assets\scripts\End_GUI.cs" />
     <Compile Include="Assets\scripts\ExplosionScript.cs" />
@@ -107,7 +87,6 @@
     <Compile Include="Assets\scripts\patternDrop.cs" />
     <Compile Include="Assets\scripts\scoreObserverBad.cs" />
     <Compile Include="Assets\scripts\scoreObserverGood.cs" />
->>>>>>> 13f52e64dfaecd9c0a096d80e1ade5b06370639a
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

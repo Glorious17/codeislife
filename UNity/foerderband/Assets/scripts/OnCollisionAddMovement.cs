@@ -2,17 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class OnCollisionAddMovement : MonoBehaviour {
+/*
+* Gameobjects on the Treadmill get Movement from Treadmill-Script
+* Gameobjects who fall off the Treadmill loose Movement 
+*/
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+public class OnCollisionAddMovement : MonoBehaviour {
 
     void OnCollisionEnter(Collision col)
     {

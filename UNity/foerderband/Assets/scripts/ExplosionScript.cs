@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ExplosionScript : MonoBehaviour {
+/*
+* Handles the Bomb-Explosion
+*/
 
-	/*
- 	* Script for handeling the Bomb-Explosion
-	 * */
+public class ExplosionScript : MonoBehaviour {
 		
 	void OnMouseDrag(){
 		explosion ();

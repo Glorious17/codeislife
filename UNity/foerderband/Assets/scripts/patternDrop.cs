@@ -2,16 +2,17 @@
 using System.Collections;
 using System.Collections.Generic;
 
+/*
+*Spawning Patterns over Time with increasing Difficulty
+*/
+
 public class patternDrop : MonoBehaviour {
-
- 	//Script for repeadedly spawning Patterns over Time with increasing Difficulty
-
 
 	public GameObject goodCup, badCup;
 	public GameObject [] powerUp; //PowerUp Array
 	public List<GameObject> pattern = new List<GameObject>(); //Gamobject of one Pattern will be saved in this list to delete them later on
 
-	//Difficulty
+	//Number of Objects in one Pattern
 	public int level = 3; 
 	public int maxLevel = 18;
 	private int counter = 0;
@@ -38,20 +39,20 @@ public class patternDrop : MonoBehaviour {
 	}
 
 	void Update () {
-		time += Time.deltaTime;
+		/*time += Time.deltaTime;
 		if (time >= 7 && GameObject.Find ("Treadmill").GetComponent<TreadmillRegulator> ().slowDownActive == false) {
 			deletePattern ();
 			spawnPattern ();
 		} else if (time >= 12 && GameObject.Find ("Treadmill").GetComponent<TreadmillRegulator> ().slowDownActive == true) {
 			deletePattern();
 			spawnPattern ();
-		}
+		}*/
 	}
 
 	//Called in Update() or CupCounter.cs
 	public void spawnPattern(){
 		GUI.wave++;
-		time = 0.0f;
+		//time = 0.0f;
 		level++; //Difficulty increases with each spawn (max 18)
 
 		//spawn one Pattern
@@ -69,7 +70,7 @@ public class patternDrop : MonoBehaviour {
 
 					//PowerUp-Spawn, immer zu Zeitpunkten, die durch einen gewissen Faktor geteilt, den Rest 0 besitzen
 					go = Instantiate(powerUp[(int)Random.Range(0f,powerUp.Length)], new Vector3(xPos, yPos, zPos), Quaternion.identity) as GameObject;
-					pattern.Add (go); //instantiiertes GameObject wird  der Liste hinzugefügt
+					pattern.Add (go); //add instance of GameObject to the List
 					alreadyExists = true;
 					counter++;
 				}
@@ -91,7 +92,7 @@ public class patternDrop : MonoBehaviour {
 		counter = 0;
 	}
 
-	//checks if Position in Grid is already occupied
+	//check if Position in Grid is already occupied
 	bool isFreeSpace(){
 
 		foreach (GameObject p in pattern) {
