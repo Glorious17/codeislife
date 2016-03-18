@@ -10,7 +10,7 @@ public class TreadmillRegulator : MonoBehaviour {
 	
 	public float publicSpeed;
 	private float slowSpeed = 1f;
-	private int slowDownDuration = 5;
+	public float slowDownDuration = 5;
 	
 	// Use this for initialization
 	void Start () {

@@ -24,6 +24,10 @@ public class scoreObserverBad : MonoBehaviour {
 				break;
 			case "Invert(Clone)":
 				mainCam.GetComponent<InvertScreen> ().i = 0;
+				GameObject.Find ("Treadmill").GetComponent<TreadmillRegulator> ().slowDownStart = GameObject.Find ("Main Camera").GetComponent<GUI> ().timeAnz;
+				GameObject.Find ("Treadmill").GetComponent<TreadmillRegulator> ().slowDownDuration = 1.4f;
+				GameObject.Find("Treadmill").GetComponent<TreadmillRegulator>().slowDownActive = true;
+
 				break;
 			default:
 				break;
