@@ -22,7 +22,6 @@ public class Start_GUI : MonoBehaviour {
         GUILayout.BeginArea(new Rect(Screen.width - Screen.width / 2 - buttonWidth / 2, Screen.height - Screen.height / 2 - buttonHeight / 2, buttonWidth, buttonHeight));
         if (GUILayout.Button("Start"))
 		{
-            Debug.Log("ufhsduifhsdfuidsfuih");
             Application.LoadLevel(1);
         }
 		if (GUILayout.Button("Back to the Menu"))

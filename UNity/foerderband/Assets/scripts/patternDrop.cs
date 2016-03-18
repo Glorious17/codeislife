@@ -34,7 +34,10 @@ public class patternDrop : MonoBehaviour {
 
 	void Update () {
 		time += Time.deltaTime;
-		if (time >= 7) {
+		if (time >= 7 && GameObject.Find ("Treadmill").GetComponent<TreadmillRegulator> ().slowDownActive == false) {
+			deletePattern ();
+			spawnPattern ();
+		} else if (time >= 12 && GameObject.Find ("Treadmill").GetComponent<TreadmillRegulator> ().slowDownActive == true) {
 			deletePattern();
 			spawnPattern ();
 		}
@@ -51,9 +54,10 @@ public class patternDrop : MonoBehaviour {
 
 			if(isFreeSpace()){
 
-				if(!alreadyExists && GameObject.Find ("Main Camera").GetComponent<GUI> ().timeAnz > 0 && GameObject.Find ("Main Camera").GetComponent<GUI> ().timeAnz%1==0){
+				if(!alreadyExists && GUI.timeAnz > 0 && GUI.timeAnz%2==0){
+
 					//PowerUp-Spawn, immer zu Zeitpunkten, die durch einen gewissen Faktor geteilt, den Rest 0 besitzen
-					go = Instantiate(powerUp[/**(int)Random.Range(0f,powerUp.Length)*/ 2], new Vector3(xPos, yPos, zPos), Quaternion.identity) as GameObject;
+					go = Instantiate(powerUp[(int)Random.Range(0f,powerUp.Length)], new Vector3(xPos, yPos, zPos), Quaternion.identity) as GameObject;
 					pattern.Add (go); //instantiiertes GameObject wird  der Liste hinzugefügt
 					alreadyExists = true;
 					counter++;

@@ -9,7 +9,7 @@ public class scoreObserverBad : MonoBehaviour {
 	{
 		if (other.tag.Equals("Bad"))
 		{
-			GameObject.Find("Main Camera").GetComponent<GUI>().score++;
+			GUI.score++;
 		}
 		else if (other.tag.Equals("PowerUp"))
 		{
@@ -20,12 +20,12 @@ public class scoreObserverBad : MonoBehaviour {
 					GameObject.Find("Main Camera").GetComponent<GUI>().leben++;
 				break;
 			case "SlowDown(Clone)":
-				GameObject.Find("Treadmill").GetComponent<TreadmillRegulator>().slowDownStart = GameObject.Find("Main Camera").GetComponent<GUI>().timeAnz;
+				GameObject.Find("Treadmill").GetComponent<TreadmillRegulator>().slowDownStart = GUI.timeAnz;
 				GameObject.Find("Treadmill").GetComponent<TreadmillRegulator>().slowDownActive = true;
 				break;
 			case "Invert(Clone)":
 				mainCam.GetComponent<InvertScreen> ().i = 0;
-				GameObject.Find ("Treadmill").GetComponent<TreadmillRegulator> ().slowDownStart = GameObject.Find ("Main Camera").GetComponent<GUI> ().timeAnz;
+				GameObject.Find ("Treadmill").GetComponent<TreadmillRegulator> ().slowDownStart = GUI.timeAnz;
 				GameObject.Find ("Treadmill").GetComponent<TreadmillRegulator> ().slowDownDuration = 1.4f;
 				GameObject.Find("Treadmill").GetComponent<TreadmillRegulator>().slowDownActive = true;
 

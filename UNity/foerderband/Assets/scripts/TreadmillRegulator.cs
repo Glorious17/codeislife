@@ -14,13 +14,17 @@ public class TreadmillRegulator : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		publicSpeed = speed;
+		if (slowDownActive) {
+			publicSpeed = speed;
+		} else {
+			publicSpeed = slowSpeed;
+		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
-		if (!slowDownActive && GameObject.Find("Main Camera").GetComponent<GUI>().timeAnz % 10 == 0)
+		if (!slowDownActive && GUI.timeAnz % 10 == 0)
 		{
 			speed += deltaSpeed * Time.deltaTime;
 			publicSpeed = speed;
@@ -30,7 +34,7 @@ public class TreadmillRegulator : MonoBehaviour {
 			publicSpeed = slowSpeed;
 			
 		}
-		if (slowDownActive && slowDownStart + slowDownDuration <= GameObject.Find ("Main Camera").GetComponent<GUI> ().timeAnz) {
+		if (slowDownActive && slowDownStart + slowDownDuration <= GUI.timeAnz) {
 			slowDownActive = false;
 			publicSpeed = speed;
 		}
