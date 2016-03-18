@@ -14,7 +14,11 @@ public class TreadmillRegulator : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		publicSpeed = speed;
+		if (slowDownActive) {
+			publicSpeed = speed;
+		} else {
+			publicSpeed = slowSpeed;
+		}
 	}
 	
 	// Update is called once per frame
