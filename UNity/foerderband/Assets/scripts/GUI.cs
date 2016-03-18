@@ -5,15 +5,14 @@ public class GUI : MonoBehaviour {
 
     public bool isPaused;
     public int leben = 3;
-    public int score = 0;
+    public static int score;
     public float time = 0;
-    public int timeAnz = 0;
+    public static int timeAnz = 0;
 
     public Texture2D lives;
 
     void start() {
         isPaused = false;
-
     }
 
     void Update() {
@@ -22,6 +21,7 @@ public class GUI : MonoBehaviour {
             timeAnz += 1;
             time = 0;
         }
+		
     }
 
     void OnGUI() {
@@ -51,6 +51,7 @@ public class GUI : MonoBehaviour {
         GUILayout.EndArea();
 
         GUILayout.BeginArea(new Rect(5, 38, 100, 80));
+
         GUILayout.Label("Score: " + score);
         GUILayout.EndArea();
 
