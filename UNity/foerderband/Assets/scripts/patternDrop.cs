@@ -53,7 +53,7 @@ public class patternDrop : MonoBehaviour {
 
 				if(!alreadyExists && GameObject.Find ("Main Camera").GetComponent<GUI> ().timeAnz > 0 && GameObject.Find ("Main Camera").GetComponent<GUI> ().timeAnz%2==0){
 					//PowerUp-Spawn, immer zu Zeitpunkten, die durch einen gewissen Faktor geteilt, den Rest 0 besitzen
-					go = Instantiate(powerUp[(int)Random.Range(0f,2f)], new Vector3(xPos, yPos, zPos), Quaternion.identity) as GameObject;
+					go = Instantiate(powerUp[(int)Random.Range(0f,powerUp.Length)], new Vector3(xPos, yPos, zPos), Quaternion.identity) as GameObject;
 					pattern.Add (go); //instantiiertes GameObject wird  der Liste hinzugefügt
 					alreadyExists = true;
 					counter++;
