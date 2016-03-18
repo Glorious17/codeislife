@@ -22,7 +22,9 @@ public class End_GUI : MonoBehaviour {
         if (GUILayout.Button("Back to the Menu"))
 		{
             Application.LoadLevel(0);
-            Debug.Log("NADA!");
+			GUI.timeAnz =0;
+			GUI.score = 0;
+			score = 0;
 		}
 		GUILayout.EndArea ();
 	}
