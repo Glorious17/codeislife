@@ -30,8 +30,10 @@ public class InvertScreen : MonoBehaviour
 			mainCam.transform.Rotate (0,yrot,0, Space.World);
 			i++;
 
-			if(i == max){
-				if (descam.Equals(falseposCam)) {
+			GameObject.Find("Main Camera").GetComponent<GUI>().isPaused = true;
+            if (i == max){
+                GameObject.Find("Main Camera").GetComponent<GUI>().isPaused = false;
+                if (descam.Equals(falseposCam)) {
 					descam = trueposCam;
 				} else {
 					descam = falseposCam;
