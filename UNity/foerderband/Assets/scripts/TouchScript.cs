@@ -5,11 +5,12 @@ public class TouchScript : MonoBehaviour {
 
 	private Rigidbody rb;
 	private float z = 12f;
-	public Camera cam;
+	private static Camera main;
 	public int speed = 50; 
 
 	void Start()
 	{   
+		main = Camera.main;
 		rb = GetComponent<Rigidbody> ();
 		rb.freezeRotation = true;
 	}
@@ -20,7 +21,7 @@ public class TouchScript : MonoBehaviour {
 		Vector3 v3 = Input.mousePosition;
 		v3.z = z;
 		//Debug.Log (v3.z);
-		v3 = cam.ScreenToWorldPoint(v3);
+		v3 = main.ScreenToWorldPoint(v3);
 
 		rb.velocity = (v3 - gameObject.transform.position) * speed;
 	}
