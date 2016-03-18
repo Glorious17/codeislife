@@ -23,6 +23,10 @@ public class ExplosionScript : MonoBehaviour {
 		if(collision.gameObject.CompareTag("Good")){
 			explosion();
 		}
+
+		if (collision.gameObject.CompareTag ("Bad")) {
+			explosion();
+		}
 	}
 	
 	void explosion(){

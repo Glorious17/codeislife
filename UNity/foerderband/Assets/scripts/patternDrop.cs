@@ -48,18 +48,18 @@ public class patternDrop : MonoBehaviour {
 			xPos = Random.Range(gridMin,gridMax) * gridWidth;
 			zPos = Random.Range(gridMin,gridMax) * gridWidth;
 
-			Debug.Log ("AlreadyExists: " + alreadyExists);
 
 			if(isFreeSpace()){
 
-				if(!alreadyExists && GameObject.Find ("Main Camera").GetComponent<GUI> ().timeAnz > 0 && GameObject.Find ("Main Camera").GetComponent<GUI> ().timeAnz%2==0){
+				if(!alreadyExists && GameObject.Find ("Main Camera").GetComponent<GUI> ().timeAnz > 0 && GameObject.Find ("Main Camera").GetComponent<GUI> ().timeAnz%1==0){
 					//PowerUp-Spawn, immer zu Zeitpunkten, die durch einen gewissen Faktor geteilt, den Rest 0 besitzen
-					go = Instantiate(powerUp[(int)Random.Range(0f,powerUp.Length)], new Vector3(xPos, yPos, zPos), Quaternion.identity) as GameObject;
+					go = Instantiate(powerUp[/**(int)Random.Range(0f,powerUp.Length)*/ 2], new Vector3(xPos, yPos, zPos), Quaternion.identity) as GameObject;
 					pattern.Add (go); //instantiiertes GameObject wird  der Liste hinzugefügt
 					alreadyExists = true;
 					counter++;
 				}
-
+			}
+			if(isFreeSpace()){
 				if(counter < Mathf.Round ((float)level/faktor)){
 					go = Instantiate(badCup, new Vector3(xPos, yPos, zPos), Quaternion.identity) as GameObject;
 

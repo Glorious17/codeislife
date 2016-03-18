@@ -16,7 +16,8 @@ public class scoreObserverBad : MonoBehaviour {
 			switch (other.gameObject.name)
 			{
 			case "OneUp(Clone)":
-				GameObject.Find("Main Camera").GetComponent<GUI>().leben++;
+				if(GameObject.Find("Main Camera").GetComponent<GUI>().leben < 5)
+					GameObject.Find("Main Camera").GetComponent<GUI>().leben++;
 				break;
 			case "SlowDown(Clone)":
 				GameObject.Find("Treadmill").GetComponent<TreadmillRegulator>().slowDownStart = GameObject.Find("Main Camera").GetComponent<GUI>().timeAnz;
