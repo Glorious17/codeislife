@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class patternDrop : MonoBehaviour {
 
+	//some random bullshit
 	public GameObject goodCup, badCup;
 	public GameObject [] powerUp; //PowerUp Array
 	public List<GameObject> pattern = new List<GameObject>(); //Liste in der die GGameObjecte des Musters abgespeichert werden, um sie wieder zu löschen
