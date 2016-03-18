@@ -34,7 +34,10 @@ public class patternDrop : MonoBehaviour {
 
 	void Update () {
 		time += Time.deltaTime;
-		if (time >= 7) {
+		if (time >= 7 && GameObject.Find ("Treadmill").GetComponent<TreadmillRegulator> ().slowDownActive == false) {
+			deletePattern ();
+			spawnPattern ();
+		} else if (time >= 12 && GameObject.Find ("Treadmill").GetComponent<TreadmillRegulator> ().slowDownActive == true) {
 			deletePattern();
 			spawnPattern ();
 		}
